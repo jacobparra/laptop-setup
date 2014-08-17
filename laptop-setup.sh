@@ -156,6 +156,14 @@ cd
 echo "*************************************************************"
 
 
+echo "*****    Installing Sublime Text Package Control    *****"
+# https://sublime.wbond.net/installation
+wget https://sublime.wbond.net/Package%20Control.sublime-package -O ~/.config/sublime-text-3/Installed\ Packages/Package\ Control.sublime-package
+
+
+echo "*************************************************************"
+
+
 echo "*****    Installing ubuntu-restricted-extras    *****"
 # requires clicks
 sudo apt-get install -y ubuntu-restricted-extras
