@@ -51,6 +51,11 @@ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | s
 sudo sh -c "echo 'deb http://linux.dropbox.com/ubuntu $(lsb_release -sc) contrib' >> /etc/apt/sources.list.d/dropbox.list"
 sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
 
+# PlayOnLinux
+wget -q "http://deb.playonlinux.com/public.gpg" -O- | sudo apt-key add -
+# For Ubuntu 14.04 (Trusty version)
+sudo wget http://deb.playonlinux.com/playonlinux_trusty.list -O /etc/apt/sources.list.d/playonlinux.list
+
 
 sudo apt-get -y --force-yes update
 
@@ -72,7 +77,7 @@ sudo apt-get install -y \
 # Tools
 sudo apt-get install -y \
     google-chrome-beta google-talkplugin \
-    wine1.7 winetricks \
+    wine1.7 winetricks playonlinux \
     openjdk-7-jdk icedtea-7-plugin \
     virtualbox virtualbox-guest-additions-iso \
     nautilus-dropbox filezilla \
