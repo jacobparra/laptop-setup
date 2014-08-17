@@ -2,7 +2,7 @@
 
 # Installation
 #
-# wget -qO-  | sh -
+# wget -qO- https://raw.githubusercontent.com/jacobparra/laptop-setup/master/laptop-setup.sh | sh -
 #
 # References
 #
