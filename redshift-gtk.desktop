@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=redshift-gtk -l 8.31:-62.71 -t 6500:3800 -b 0.8
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Redshift
+Name=Redshift
+Comment[en_US]=
+Comment=
