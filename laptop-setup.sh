@@ -148,17 +148,16 @@ rm -rf gnome-terminal-colors-solarized
 echo "*****    Cloning dotfiles    *****"
 rm -rf ~/.dotfiles
 git clone https://github.com/jacobparra/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-./setup.sh
-cd
+bash ~/.dotfiles/setup.sh
 
 
 echo "*************************************************************"
 
 
-echo "*****    Installing Sublime Text Package Control    *****"
-# https://sublime.wbond.net/installation
-wget https://sublime.wbond.net/Package%20Control.sublime-package -O ~/.config/sublime-text-3/Installed\ Packages/Package\ Control.sublime-package
+echo "*****    Cloning sublime-text-settings    *****"
+rm -rf ~/.sublime-text-settings
+git clone https://github.com/jacobparra/sublime-text-settings.git ~/.sublime-text-settings
+sh ~/.sublime-text-settings/setup.sh
 
 
 echo "*************************************************************"
