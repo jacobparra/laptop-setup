@@ -56,6 +56,10 @@ wget -q "http://deb.playonlinux.com/public.gpg" -O- | sudo apt-key add -
 # For Ubuntu 14.04 (Trusty version)
 sudo wget http://deb.playonlinux.com/playonlinux_trusty.list -O /etc/apt/sources.list.d/playonlinux.list
 
+# GetDeb (PyCharm)
+wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
+sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu $(lsb_release -sc)-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
+
 
 sudo apt-get -y --force-yes update
 
@@ -89,7 +93,7 @@ sudo apt-get install -y \
 
 echo "*****    Installing development tools    *****"
 sudo apt-get install -y git  \
-    vim sublime-text-installer \
+    vim sublime-text-installer pycharm \
     typecatcher \
     nodejs python-pip
 
@@ -170,7 +174,7 @@ sudo apt-get install -y ubuntu-restricted-extras
 # http://www.webupd8.org/2014/04/10-things-to-do-after-installing-ubuntu.html
 echo "*****    Installing extra media codecs    *****"
 sudo apt-get install -y libavcodec-extra
-sudo apt-get install -y libdvdread4 
+sudo apt-get install -y libdvdread4
 sudo /usr/share/doc/libdvdread4/install-css.sh
 
 
